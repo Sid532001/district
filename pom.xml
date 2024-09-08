@@ -14,7 +14,6 @@
     <version>1.0.0</version>
     <name>District</name>
     <modules>
-        <module>admin-service</module>
         <module>event</module>
         <module>user</module>
         <module>booking</module>
