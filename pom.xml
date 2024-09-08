@@ -17,6 +17,7 @@
         <module>admin</module>
         <module>event</module>
         <module>user</module>
+        <module>booking</module>
     </modules>
     <description>Allows event organizers or admins to manage their events, including adding, updating, and monitoring event performance and sales.</description>
     <url/>
