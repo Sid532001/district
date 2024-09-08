@@ -8,11 +8,11 @@
 		<version>1.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.personal.district</groupId>
-	<artifactId>event</artifactId>
+	<groupId>com.district</groupId>
+	<artifactId>booking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>event</name>
-	<description>Event</description>
+	<name>booking</name>
+	<description>Booking</description>
 	<url/>
 	<licenses>
 		<license/>
