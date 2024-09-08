@@ -1,13 +1,13 @@
-package com.district.event;
+package com.personal.district.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EventApplication {
+public class UserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventApplication.class, args);
+		SpringApplication.run(UserApplication.class, args);
 	}
 
 }

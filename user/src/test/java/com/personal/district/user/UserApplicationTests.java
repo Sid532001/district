@@ -1,10 +1,10 @@
-package com.district.event;
+package com.personal.district.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EventApplicationTests {
+class UserApplicationTests {
 
 	@Test
 	void contextLoads() {
