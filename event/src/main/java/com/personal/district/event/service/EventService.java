@@ -1,11 +1,10 @@
-package com.personal.district.admin.service;
+package com.personal.district.event.service;
 
-import com.personal.district.admin.model.Event;
-import com.personal.district.admin.repository.EventDbModelRepository;
+import com.personal.district.event.model.Event;
+import com.personal.district.event.repository.EventDbModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

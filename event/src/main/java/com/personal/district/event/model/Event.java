@@ -1,6 +1,5 @@
-package com.personal.district.admin.model;
+package com.personal.district.event.model;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.personal.district.admin.controller;
+package com.personal.district.event.controller;
 
-import com.personal.district.admin.model.Event;
-import com.personal.district.admin.service.EventService;
+import com.personal.district.event.model.Event;
+import com.personal.district.event.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,6 @@ public class EventController {
 
     @Autowired
     private EventService eventService;
-
     @PostMapping("/createEvent")
     public ResponseEntity<String> createEvent(@RequestBody Event eventDetails) {
         if (eventDetails == null) {

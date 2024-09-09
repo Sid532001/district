@@ -1,4 +1,4 @@
-package com.personal.district.admin.model;
+package com.personal.district.event.model;
 
 public enum Category {
     MUSIC,
