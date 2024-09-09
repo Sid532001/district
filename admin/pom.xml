@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.personal.district</groupId>
-	<artifactId>admin-service</artifactId>
+	<artifactId>admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>event</name>
 	<description>Event</description>
