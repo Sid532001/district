@@ -35,6 +35,11 @@ public class BookingController {
         return bookingService.getAllBookings();
     }
 
+    @GetMapping("/getBookingCount")
+    public int getBookingCount() {
+        return bookingService.getAllBookings().size();
+    }
+
     @PutMapping
     public Booking updateBooking(@RequestBody Booking booking) {
         return bookingService.updateBooking(booking);

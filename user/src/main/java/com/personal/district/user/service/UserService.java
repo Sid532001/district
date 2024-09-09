@@ -76,4 +76,8 @@ public class UserService {
         User user = getUserById(userId);
         return user.getFeedbacks();
     }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }

@@ -67,4 +67,11 @@ public class UserController {
         List<Feedback> feedbacks = userService.getUserFeedback(userId);
         return ResponseEntity.ok(feedbacks);
     }
+
+    //Get All Users
+    @GetMapping("/allUsers")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
+    }
 }
