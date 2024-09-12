@@ -1,10 +1,10 @@
-//package com.personal.district.user;
+//package com.personal.district.notification;
 //
 //import org.junit.jupiter.api.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
 //
 //@SpringBootTest
-//class UserApplicationTests {
+//class NotificationApplicationTests {
 //
 //	@Test
 //	void contextLoads() {

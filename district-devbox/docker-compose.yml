@@ -1,0 +1,70 @@
+version: '2.4'
+services:
+
+  admin:
+    build:
+      context: ../admin
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - SERVER_PORT=8080
+
+  user:
+    build:
+      context: ../user
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
+    environment:
+      - SERVER_PORT=8081
+
+  booking:
+    build:
+      context: ../booking
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    env_file:
+      - .env
+    environment:
+      - SERVER_PORT=8082
+
+  event:
+    build:
+      context: ../event
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    env_file:
+      - .env
+    environment:
+      - SERVER_PORT=8083
+
+  notification:
+    build:
+      context: ../notification
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+    env_file:
+      - .env
+    environment:
+      - SERVER_PORT=8084
+
+#  localstack:
+#    container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
+#    image: localstack/localstack
+#    ports:
+#      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+#      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+#    environment:
+#      # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
+#      - DEBUG=${DEBUG:-0}
+#    volumes:
+#      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+#      - "/var/run/docker.sock:/var/run/docker.sock"

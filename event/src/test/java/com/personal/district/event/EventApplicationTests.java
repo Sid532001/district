@@ -1,10 +1,10 @@
-//package com.personal.district.user;
+//package com.personal.district.event;
 //
 //import org.junit.jupiter.api.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
 //
 //@SpringBootTest
-//class UserApplicationTests {
+//class EventApplicationTests {
 //
 //	@Test
 //	void contextLoads() {

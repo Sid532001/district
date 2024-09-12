@@ -13,8 +13,10 @@ import java.time.LocalDateTime;
 public class Booking {
     @Id
     private String bookingId;
-    private long spaceId;
+    private long eventId;
     private String userId;
+    private int quantity;
     private Long amount;
     private LocalDateTime timestamp;
+    private String eTicketUrl;
 }

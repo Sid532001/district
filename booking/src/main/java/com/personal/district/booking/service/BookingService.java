@@ -3,7 +3,9 @@ package com.personal.district.booking.service;
 
 import com.personal.district.booking.model.Booking;
 import com.personal.district.booking.repository.BookingRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
 public class BookingService {
 
     private final BookingRepository bookingRepository;
+    @Autowired
+    RestTemplate restTemplate;
 
     public BookingService(BookingRepository bookingRepository) {
         this.bookingRepository = bookingRepository;
@@ -30,8 +34,9 @@ public class BookingService {
     public Booking updateBooking(Booking booking) {
         return bookingRepository.findById(booking.getBookingId())
                 .map(existingBooking -> {
-                    existingBooking.setSpaceId(booking.getSpaceId());
+                    existingBooking.setEventId(booking.getEventId());
                     existingBooking.setUserId(booking.getUserId());
+                    existingBooking.setQuantity(booking.getQuantity());
                     existingBooking.setAmount(booking.getAmount());
                     existingBooking.setTimestamp(booking.getTimestamp());
                     return bookingRepository.save(existingBooking);
@@ -40,5 +45,9 @@ public class BookingService {
     }
     public void deleteBooking(String bookingId){
         bookingRepository.deleteById(bookingId);
+    }
+
+    public String eventName(String eventId){
+        return restTemplate.getForObject("http://localhost:8080/v1/event/getEvent/"+eventId, String.class);
     }
 }

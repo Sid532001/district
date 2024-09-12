@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>com.personal.district</groupId>
-    <artifactId>booking</artifactId>
+    <artifactId>notification</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>booking</name>
-    <description>Booking</description>
+    <name>notification</name>
+    <description>Notification</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

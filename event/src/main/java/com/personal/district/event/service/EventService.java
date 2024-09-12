@@ -25,6 +25,10 @@ public class EventService {
         return true;
     }
 
+    public Event getEvent(String id) {
+        return eventDbModelRepository.findById(id).orElse(null);
+    }
+
     public List<Event> getEvents() {
         return eventDbModelRepository.findAll();
     }

@@ -1,4 +1,4 @@
-package com.personal.district.admin.config;
+package com.personal.district.event.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -6,13 +6,13 @@
 		<groupId>com.personal</groupId>
 		<artifactId>district</artifactId>
 		<version>1.0.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.personal.district</groupId>
 	<artifactId>admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>event</name>
-	<description>Event</description>
+	<name>admin</name>
+	<description>Admin</description>
 	<url/>
 	<licenses>
 		<license/>

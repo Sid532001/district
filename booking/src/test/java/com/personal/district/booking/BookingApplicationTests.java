@@ -1,10 +1,10 @@
-//package com.personal.district.user;
+//package com.personal.district.booking;
 //
 //import org.junit.jupiter.api.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
 //
 //@SpringBootTest
-//class UserApplicationTests {
+//class BookingApplicationTests {
 //
 //	@Test
 //	void contextLoads() {

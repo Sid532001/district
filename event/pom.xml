@@ -7,10 +7,14 @@
         <groupId>com.personal</groupId>
         <artifactId>district</artifactId>
         <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.example</groupId>
+    <groupId>com.personal.district</groupId>
     <artifactId>event</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>event</name>
+    <description>Event</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

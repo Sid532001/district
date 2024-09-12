@@ -20,10 +20,15 @@ public class EventController {
             return ResponseEntity.badRequest().build();
         }
         if (eventService.addEvent(eventDetails)) {
-            return ResponseEntity.ok().build();
+            return ResponseEntity.created(null).build();
         } else {
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    @GetMapping("/getEvent/{eventId}")
+    public Event getEvent(@PathVariable String eventId) {
+        return eventService.getEvent(eventId);
     }
 
     @GetMapping("/getEvents")
