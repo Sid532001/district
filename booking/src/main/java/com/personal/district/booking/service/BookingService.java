@@ -5,7 +5,6 @@ import com.personal.district.booking.model.Booking;
 import com.personal.district.booking.repository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -14,13 +13,14 @@ public class BookingService {
 
     private final BookingRepository bookingRepository;
     @Autowired
-    RestTemplate restTemplate;
+    BookingEventPublisher bookingEventPublisher;
 
     public BookingService(BookingRepository bookingRepository) {
         this.bookingRepository = bookingRepository;
     }
 
     public Booking createBooking(Booking booking){
+        bookingEventPublisher.publishBookingCreated(booking);
         return bookingRepository.save(booking);
     }
     public Booking getBookingById(String id) {
@@ -47,7 +47,4 @@ public class BookingService {
         bookingRepository.deleteById(bookingId);
     }
 
-    public String eventName(String eventId){
-        return restTemplate.getForObject("http://localhost:8080/v1/event/getEvent/"+eventId, String.class);
-    }
 }

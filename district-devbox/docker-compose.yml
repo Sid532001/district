@@ -56,6 +56,16 @@ services:
     environment:
       - SERVER_PORT=8084
 
+  rabbitmq:
+    image: rabbitmq:3.13.7-management-alpine
+    container_name: 'rabbitmq'
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
 #  localstack:
 #    container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
 #    image: localstack/localstack

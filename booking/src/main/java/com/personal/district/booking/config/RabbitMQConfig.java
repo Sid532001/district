@@ -1,5 +1,6 @@
 package com.personal.district.booking.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,18 +8,12 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "queue")
 public class RabbitMQConfig {
 
+    @Value("${queue.exchange}")
     private String exchange;
+    @Value("${queue.queueName}")
     private String queueName;
+    @Value("${queue.routingKey}")
     private String routingKey;
-    private boolean durable;
-
-    public boolean isDurable() {
-        return durable;
-    }
-
-    public void setDurable(boolean durable) {
-        this.durable = durable;
-    }
 
     public String getExchange() {
         return exchange;

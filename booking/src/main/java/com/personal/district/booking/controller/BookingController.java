@@ -1,9 +1,11 @@
 package com.personal.district.booking.controller;
 
 import com.personal.district.booking.model.Booking;
+import com.personal.district.booking.service.BookingEventPublisher;
 import com.personal.district.booking.service.BookingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +16,12 @@ import java.util.List;
 public class BookingController {
     final static Logger logger = LoggerFactory.getLogger(BookingController.class.getName());
 
-    private final BookingService bookingService;
+    @Autowired
+    private BookingService bookingService;
+    @Autowired
+    private BookingEventPublisher bookingEventPublisher;
 
-    public BookingController(BookingService bookingService) {
-        this.bookingService = bookingService;
-    }
-
-    @PostMapping
+    @PostMapping("/newBooking")
     public Booking createBooking(@RequestBody Booking booking) {
         return bookingService.createBooking(booking);
     }
